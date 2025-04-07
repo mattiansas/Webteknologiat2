@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <title> lomake-esimerkki</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <h1>lomake-esimerkki</h1>
+
+    <form>
+        <fieldset>
+            <legend>Henkilötiedot</legend>
+            <textarea rows="10" cols="50"></textarea>
+
+            <table>
+                <tr>
+
+                    <th colspan="2">Anna henkilötietosi</th>
+                    <th colspan="2">Anna kulkuneuvosi tiedot</th>
+                </tr>
+                <tr>
+                    <td> <label for="fname"> Etunimi </label> </td>
+                    <td> <input type="text" id="fname" name="fname"></td>
+                    <td><input type="checkbox"></td>
+                    <td><label> Polkupyörä </label></td>
+                </tr>
+                <tr>
+                    <td> <label for="lname"> Sukunimi </label> </td>
+                    <td> <input type="text" id="lname" name="fname"> </td>
+                    <td><input type="checkbox"></td>
+                    <td><label> Auto </label></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Kerro itsestäsi</legend>
+            <textarea rows="10" cols="50"> </textarea>
+            <br>
+            <input type="file">
+            <input type="button" value="Lähetä">
+        </fieldset>
+    </form>
+
+
+</body>
+
+</html>

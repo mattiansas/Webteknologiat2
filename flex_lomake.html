@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <title> lomake-esimerkki</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <h1>lomake-esimerkki</h1>
+
+    <form>
+        <fieldset>
+            <legend>Henkilötiedot</legend>
+
+
+            <div class="container">
+
+                <div class="input-container">
+                    <h3>Anna henkilötietosi</h3>
+                </div>
+
+                <div class="input-container">
+                    <label for="fname"> Etunimi </label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+
+                <div class="input-container">
+                    <label for="lname"> Sukunimi </label>
+                    <input type="text" id="lname" name="fname">
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="input-container">
+                    <h3>Anna kulkuneuvosi tiedot</h3>
+                </div>
+
+                <div class="input-container">
+                    <label> Polkupyörä </label>
+                    <input type="checkbox">
+                </div>
+
+                <div class="input-container">
+                    <label> Auto </label>
+                    <input type="checkbox">
+                </div>
+            </div>
+            </div>
+
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Kerro itsestäsi</legend>
+            <div class="container">
+                <div class="input-container">
+                    <textarea rows="10"> </textarea>
+                </div>
+                <div class="input-container">
+                    <input type="file">
+                </div>
+                <div class="input-container"></div>
+                <input type="button" value="Lähetä">
+            </div>
+            </div>
+        </fieldset>
+    </form>
+
+
+</body>
+
+</html>

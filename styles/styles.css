@@ -1,0 +1,94 @@
+body {
+    background-color: floralwhite;
+    width: 60%;
+    margin: auto;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.content {
+    background-color: antiquewhite;
+    padding: 10px;
+}
+
+th,
+td,
+table {
+    border: 1px solid red;
+
+}
+
+th {
+    font-size: large;
+    font-weight: 400;
+    text-align: left;
+    padding: 5px;
+}
+
+td {
+    font-size: large;
+    font-weight: 200;
+    padding: 5px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+p {
+    font-size: large;
+    line-height: 2;
+    text-indent: 20px;
+    word-spacing: 2px;
+    text-align: justify;
+}
+
+h1 {
+
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+fieldset {
+    background-color: aliceblue;
+    border-color: azure;
+    border-width: 3px;
+    border-radius: 30px;
+    border-style: dashed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+input[type=button] {
+    background-color: blanchedalmond;
+    border-color: blue;
+    border-width: 2px;
+    border-radius: 5px;
+    max-width: 60PX;
+}
+
+input[type=text],
+input[type=checkbox] {
+    background-color: antiquewhite;
+    border-radius: 2px;
+    margin-left: 10px;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.input-container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <form>
+        <fieldset style="width: 450px;">
+            <legend>Contact information</legend>
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="firstName"></td>
+                    <td>Preferred Contact Method:</td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lastName"></td>
+                    <td><label><input type="radio" name="contactMethod" value="email">Email</label></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email"></td>
+                    <td><label><input type="radio" name="contactMethod" value="telephone">Telephone</label></td>
+                </tr>
+                <tr>
+                    <td>Telephone:</td>
+                    <td><input type="tel" name="telephone"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset style="width: 450px;">
+            <legend>Feedback:</legend>
+            <table>
+                <tr>
+                    <td>Message Subject:</td>
+                    <td><input type="text" name="subject"></td>
+                </tr>
+                <tr>
+                    <td>Message:</td>
+                    <td><textarea name="message" rows="5"></textarea></td>
+                </tr>
+            </table>
+            <label>
+                Attach a file:
+                <input type="file" name="file">
+            </label>
+            <br>
+            <button type="submit">Send</button>
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
