@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyylikäs Laskin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .calculator-container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-box {
+            border: 2px dashed #6c757d;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container calculator-container mt-5">
+        <h1 class="text-center">Valitse numerot ja laske</h1>
+        <div class="row my-3">
+            <!-- First Number -->
+            <div class="col-4 d-flex align-items-center">
+                <button class="btn btn-primary" onclick="decrement('number1')">−</button>
+                <input type="number" class="form-control mx-2 text-center" id="number1" readonly>
+                <button class="btn btn-primary" onclick="increment('number1')">+</button>
+            </div>
+
+            <!-- Operator -->
+            <div class="col-4">
+                <select class="form-select" id="operator">
+                    <option value="*" selected>*</option>
+                    <option value="+">+</option>
+                    <option value="-">−</option>
+                    <option value="/">÷</option>
+                </select>
+            </div>
+
+            <!-- Second Number -->
+            <div class="col-4 d-flex align-items-center">
+                <button class="btn btn-primary" onclick="decrement('number2')">−</button>
+                <input type="number" class="form-control mx-2 text-center" id="number2" readonly>
+                <button class="btn btn-primary" onclick="increment('number2')">+</button>
+            </div>
+        </div>
+
+        <button class="btn btn-success w-100" onclick="calculate()">Laske</button>
+
+        <div class="result-box text-center" id="result">Tulos: </div>
+    </div>
+
+    <script>
+        // Generate random numbers when the page loads
+        window.onload = function () {
+            document.getElementById('number1').value = getRandomNumber();
+            document.getElementById('number2').value = getRandomNumber();
+        };
+
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+        }
+
+        // Increment function
+        function increment(id) {
+            const element = document.getElementById(id);
+            let value = parseInt(element.value);
+            if (value < 10) {
+                element.value = value + 1;
+            }
+        }
+
+        // Decrement function
+        function decrement(id) {
+            const element = document.getElementById(id);
+            let value = parseInt(element.value);
+            if (value > 1) {
+                element.value = value - 1;
+            }
+        }
+
+        // Calculate function
+        function calculate() {
+            const number1 = parseInt(document.getElementById('number1').value);
+            const number2 = parseInt(document.getElementById('number2').value);
+            const operator = document.getElementById('operator').value;
+
+            let result;
+            switch (operator) {
+                case '*':
+                    result = number1 * number2;
+                    break;
+                case '+':
+                    result = number1 + number2;
+                    break;
+                case '-':
+                    result = number1 - number2;
+                    break;
+                case '/':
+                    result = number1 / number2;
+                    break;
+                default:
+                    result = 'Virhe';
+            }
+
+            document.getElementById('result').innerText = `Tulos: ${result}`;
+        }
+    </script>
+</body>
+
+</html>

@@ -16,8 +16,18 @@
 
     <style>
         .calculator-container {
-            max-width: 400px;
-            margin: 50px auto;
+            max-width: 800px;
+            margin: auto;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-box {
+            border: 2px dashed #6c757d;
+            padding: 10px;
+            margin-top: 20px;
         }
 
         .info-icon {
@@ -29,7 +39,10 @@
     </head>
 
     <body>
-        <div class="container calculator-container">
+
+
+
+        <div class="container calculator-container mt-5">
             <h1 class="text-center">Valitse numerot ja laske
                 <span class="info-icon" data-bs-toggle="tooltip"
                     title="Tämä laskin laskee luvut yhteen, vähentää, kertolasku tai jakolasku.">
@@ -37,24 +50,40 @@
                 </span>
             </h1>
             <div class="row my-3">
-                <div class="col-4">
-                    <input type="number" class="form-control">
+                <!-- First Number -->
+                <div class="col-4 d-flex align-items-center">
+                    <button class="btn btn-danger" onclick="decrement('number1')">−</button>
+                    <input type="number" class="form-control mx-2 text-center" id="number1" readonly>
+                    <button class="btn btn-success" onclick="increment('number1')">+</button>
                 </div>
+
+                <!-- Operator -->
                 <div class="col-4">
-                    <select class="form-select">
-                        <option value="*">*</option>
-                        <option value="+">+</option>
+                    <select class="form-select" id="operator">
+                        <option value="+" selected>+</option>
                         <option value="-">-</option>
-                        <option value="/">/</option>
+                        <option value="*">*</option>
+                        <option value="/">÷</option>
                     </select>
                 </div>
-                <div class="col-4">
-                    <input type="number" class="form-control">
+
+                <!-- Second Number -->
+                <div class="col-4 d-flex align-items-center">
+                    <button class="btn btn-danger" onclick="decrement('number2')">−</button>
+
+                    <input type="number" class="form-control mx-2 text-center" id="number2" readonly>
+
+                    <button class="btn btn-success" onclick="increment('number2')">+</button>
                 </div>
             </div>
-            <button class="btn btn-primary w-100" id="calc-button" onclick="calculate()">Laske</button>
-            <div class="text-center mt-3">
-                <input type="text" class="form-control text-center" readonly placeholder="Tulos:">
+
+            <button class="btn btn-primary w-100" onclick="calculate()">Laske</button>
+
+            <div class="result-box text-center" id="result">Tulos: </div>
+
+            <div class="history-box mt-3">
+                <h5>Laskuhistoria:</h5>
+                <div id="history"></div>
             </div>
         </div>
 
