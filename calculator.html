@@ -51,14 +51,14 @@
             </h1>
             <div class="row my-3">
                 <!-- First Number -->
-                <div class="col-4 d-flex align-items-center">
+                <div class="col-md-4 col-sm-6 col-12 d-flex align-items-center mb-3">
                     <button class="btn btn-danger" onclick="decrement('number1')">−</button>
-                    <input type="number" class="form-control mx-2 text-center" id="number1" readonly>
+                    <input type="number" class="form-control mx-2 text-center" id="number1">
                     <button class="btn btn-success" onclick="increment('number1')">+</button>
                 </div>
 
                 <!-- Operator -->
-                <div class="col-4">
+                <div class="col-md-4 col-sm-6 col-12 mb-3">
                     <select class="form-select" id="operator">
                         <option value="+" selected>+</option>
                         <option value="-">-</option>
@@ -68,10 +68,10 @@
                 </div>
 
                 <!-- Second Number -->
-                <div class="col-4 d-flex align-items-center">
+                <div class="col-md-4 col-sm-6 col-12 d-flex align-items-center mb-3">
                     <button class="btn btn-danger" onclick="decrement('number2')">−</button>
 
-                    <input type="number" class="form-control mx-2 text-center" id="number2" readonly>
+                    <input type="number" class="form-control mx-2 text-center" id="number2">
 
                     <button class="btn btn-success" onclick="increment('number2')">+</button>
                 </div>
