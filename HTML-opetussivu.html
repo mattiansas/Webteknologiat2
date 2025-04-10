@@ -4,16 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>HTML opetussivu</title>
+    <link rel="stylesheet" href="styles/HTML-opetussivu.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
 
+
     <nav class="navbar navbar-expand-md bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Bootstrap esimerkkisivu</a>
+            <a class="navbar-brand" href="#">HTML opetussivu</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,16 +23,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#hello">Hello</a>
+                        <a class="nav-link active" aria-current="page" href="#hello">Moi vaan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#karuselli">Karuselli</a>
+                        <a class="nav-link" href="index.html">index</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#kortti">Kortti</a>
+                        <a class="nav-link" href="lomakepalautus.html">lomake</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#lomake">Lomake</a>
+                        <a class="nav-link" href="kurssisivu.html">kurssisivu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="flex_lomake.html">flex-lomake</a>
                     </li>
                 </ul>
             </div>
@@ -38,104 +43,138 @@
     </nav>
 
 
+
     <div class="container">
         <div id="hello" class="text-center my-5 py-2">
-            <h1>Hello, world!</h1>
-            <p>Bootstrap esimerkkisivu</p>
+            <h1>Moi vaan</h1>
+            <p>HTML opetussivu</p>
         </div>
-        <div id="karuselli" class="my-5 d-none d-lg-block">
 
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="pictures/koodari.jpg" class="d-block w-100" alt="...">
+        <div class="container my-5">
+            <div class="css-info-box text-center p-4">
+                <h2 class="mb-3">Muotoilu CSS:llä ja kirjastot</h2>
+                <p>
+                    CSS (Cascading Style Sheets) käytetään verkkosivun ulkoasun muotoiluun. Se mahdollistaa fonttien,
+                    värien,
+                    marginaalien, asettelujen ja muiden visuaalisten elementtien säätämisen. CSS voidaan liittää
+                    HTML-sivulle
+                    joko suoraan (inline), &lt;style&gt;-tagin sisällä tai ulkoisena tiedostona &lt;link&gt;-tagin
+                    avulla.
+                </p>
+                <p>
+                    CSS-kirjastot, kuten Bootstrap, tarjoavat valmiita tyylejä ja komponentteja, jotka helpottavat
+                    kehitystä.
+                    Ne sisältävät responsiivisia asetteluja, painikkeita, valikoita, kortteja ja paljon muuta, jolloin
+                    kehittäjän
+                    ei tarvitse rakentaa kaikkea alusta asti.
+                </p>
+            </div>
+        </div>
+
+        <div id="kortti" class="row my-5">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png"
+                        class="card-img-top" alt="HTML logo">
+                    <div class="card-body">
+                        <h5 class="card-title"> &lt;HTML&gt;</h5>
+                        <p class="card-text">HTML-dokumentin juurielementti. Se kertoo selaimelle, että kyseessä on
+                            HTML-dokumentti.</p>
+                        <a href="#" class="btn btn-primary">HTML</a>
                     </div>
-                    <div class="carousel-item">
-                        <img src="pictures/saapas.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png"
+                        class="card-img-top" alt="HTML logo">
+                    <div class="card-body">
+                        <h5 class="card-title"> &lt;HEAD&gt;</h5>
+                        <p class="card-text">sisältää metatietoa dokumentista. (otsikko, tyylit, scriptit, linkit,
+                            ja ikonit). Se on tarkoitettu selaimelle ja muille ohjelmille, jotta ne voivat
+                            ymmärtää dokumentin ominaisuuksia ja toiminnallisuuksia.
+                        </p>
+                        <a href="#" class="btn btn-primary">HEAD</a>
                     </div>
-                    <div class="carousel-item">
-                        <img src="pictures/koodi.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png"
+                        class="card-img-top" alt="HTML logo">
+                    <div class="card-body">
+                        <h5 class="card-title"> &lt;BODY&gt;</h5>
+                        <p class="card-text"> elementti sisältää kaiken selaimessa käyttäjälle näkyvän sisällön ja
+                            elementit. (Teksti (esim. otsikot, kappaleet)
+                            Kuvat, linkit, lomakkeet, taulukot, videot ja äänet)</p>
+
+                        <a href="#" class="btn btn-primary">BODY</a>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-        </div>
-
-
-
-        <div id="kortti" class="my-5 d-flex justify-content-evenly">
-
-
-            <div class="card" style="width: 18rem;">
-                <img src="https://cataas.com/cat" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Kissakuva</h5>
-                    <p class="card-text">Kuva haettu Cat as a service- palvelusta
-                        (<a href="https://cataas.com/cat">
-                            https://cataas.com/cat </a>)
-                    </p>
-                    <a href="#" class="btn btn-primary">miau</a>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png"
+                        class="card-img-top" alt="HTML logo">
+                    <div class="card-body">
+                        <h5 class="card-title">&lt;P&gt;</h5>
+                        <p class="card-text">Käytetään tekstikappaleiden määrittelyyn. Luo automaattisesti tyhjää tilaa
+                            ennen ja jälkeen tekstin, parantaen luettavuutta.</p>
+                        <a href="#" class="btn btn-primary">P</a>
+                    </div>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="https://cataas.com/cat" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Kissakuva</h5>
-                    <p class="card-text">Kuva haettu Cat as a service- palvelusta
-                        (<a href="https://cataas.com/cat">
-                            https://cataas.com/cat </a>)
-                    </p>
-                    <a href="#" class="btn btn-primary">miau</a>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png"
+                        class="card-img-top" alt="HTML logo">
+                    <div class="card-body">
+                        <h5 class="card-title"> &lt;IMG&gt;</h5>
+                        <p class="card-text">Käytetään kuvien lisäämiseen verkkosivulle. Vaatii src-attribuutin
+                            kuvatiedoston osoitteelle.</p>
+                        <a href="#" class="btn btn-primary">IMG</a>
+                    </div>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
-                <img src="https://cataas.com/cat" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Kissakuva</h5>
-                    <p class="card-text">Kuva haettu Cat as a service- palvelusta
-                        (<a href="https://cataas.com/cat">
-                            https://cataas.com/cat </a>)
-                    </p>
-                    <a href="#" class="btn btn-primary">miau</a>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png"
+                        class="card-img-top" alt="HTML logo">
+                    <div class="card-body">
+                        <h5 class="card-title"> &lt;A&gt;</h5>
+                        <p class="card-text">Luo hyperlinkin toiseen osoitteeseen. Käyttää href-attribuuttia linkin
+                            kohteen määrittelyyn.</p>
+                        <a href="#" class="btn btn-primary">A</a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div id="lomake" class="my-y">
-            <h2>Jätä viesti</h2>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Viesti</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png"
+                        class="card-img-top" alt="HTML logo">
+                    <div class="card-body">
+                        <h5 class="card-title"> &lt;BR&gt;</h5>
+                        <p class="card-text">Rivinvaihto-elementti, joka ei tarvitse lopetustagia. Luo uuden rivin
+                            tekstin väliin.</p>
+                        <a href="#" class="btn btn-primary">BR</a>
+                    </div>
+                </div>
             </div>
-
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Sähköposti</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nimi@osoite">
-            </div>
-
-            <div class="mb-3">
-                <button type="submit" class="btn btn-primary mb-3">Lähetä viesti</button>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1280px-HTML5_logo_and_wordmark.svg.png"
+                        class="card-img-top" alt="HTML logo">
+                    <div class="card-body">
+                        <h5 class="card-title"> &lt;H1&gt;</h5>
+                        <p class="card-text">Suurin otsikkotaso. Käytetään tärkeimpien otsikoiden esittämiseen. Arvo
+                            pienenee &lt;H6&gt; saakka.</p>
+                        <a href="#" class="btn btn-primary">H1</a>
+                    </div>
+                </div>
             </div>
 
         </div>
-
 
     </div>
 
@@ -146,13 +185,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script>
-        const myCarousel = document.getElementById('carouselExampleIndicators')
 
-        myCarousel.addEventListener('slide.bs.carousel', event => {
-            // do something...
-        })
-    </script>
 
 </body>
 
