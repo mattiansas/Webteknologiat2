@@ -31,6 +31,15 @@ function decrement(id) {
     }
 }
 
+function validateInput(id) {
+    const element = document.getElementById(id);
+    const value = parseInt(element.value);
+    if (value > 10) {
+        alert("Virhe: Numero ei voi olla yli 10!"); // Error message
+        element.value = 10; // Reset the value to 10
+    }
+}
+
 function calculate() {
     const number1 = parseInt(document.getElementById('number1').value);
     const number2 = parseInt(document.getElementById('number2').value);

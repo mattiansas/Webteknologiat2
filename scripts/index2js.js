@@ -3,6 +3,6 @@ function init() {
 }
 
 function sayHelloTo(name) {
-    alert("Hello " + name + "!");
+    alert("Hello " + name + "! Tervetuloa Javascript tehtävät sivulleni!");
     console.log("sayHello- funktio suoritettu");
 }

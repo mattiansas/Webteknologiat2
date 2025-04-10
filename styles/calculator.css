@@ -38,3 +38,31 @@ input::-webkit-inner-spin-button {
     padding-top: 15px;
     height: 60px;
 }
+
+.calculator-container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-box {
+    border: 2px dashed #6c757d;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.info-icon {
+    font-size: 1.2rem;
+    color: #007bff;
+    cursor: pointer;
+}
+
+#operator {
+    text-align: center;
+    /* Centers text horizontally */
+    padding: 5px;
+    /* Adjust padding if needed */
+}
