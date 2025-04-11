@@ -1,0 +1,68 @@
+/* Center the iframe (Google Map) */
+#map-frame {
+    display: block;
+    /* Makes the iframe behave like a block element */
+    margin: 20px auto;
+    /* Centers the iframe horizontally and adds vertical space */
+    border: 2px solid #007bff;
+    /* Optional: Add a blue border for a styled look */
+    border-radius: 10px;
+    /* Optional: Rounds the corners */
+}
+
+/* Center the form */
+form {
+    max-width: 500px;
+    /* Limit the form width for a clean layout */
+    margin: 0 auto 20px;
+    /* Center the form and add space below */
+    text-align: left;
+    /* Align text inside the form fields properly */
+    padding: 10px;
+    /* Add some padding for better spacing */
+    border: 1px solid #ccc;
+    /* Optional: Add a border around the form */
+    border-radius: 5px;
+    /* Optional: Rounded corners for the form */
+    background-color: #f9f9f9;
+    /* Optional: Light background for contrast */
+}
+
+/* Style the table inside the form */
+form table {
+    width: 100%;
+    /* Ensure the table spans the full width of the form */
+}
+
+/* Style the input fields and button */
+form input,
+form button {
+    width: 100%;
+    /* Make inputs and button span the table cells */
+    padding: 10px;
+    /* Add padding for a better look */
+    margin-bottom: 10px;
+    /* Add spacing between form elements */
+    border: 1px solid #ccc;
+    /* Add a border to inputs and button */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+form button {
+    background-color: #28a745;
+    /* Green button background */
+    color: #fff;
+    /* White text for the button */
+    border: none;
+    /* Remove border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition effect */
+}
+
+form button:hover {
+    background-color: #218838;
+    /* Slightly darker green on hover */
+}
