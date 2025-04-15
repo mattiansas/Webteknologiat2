@@ -8,6 +8,9 @@ let catsArray = [
     { "name": "Unto ja Late <3", "src": "pictures/untojalate.jpg" }
 ];
 
+// Array of text colors for dynamic styling
+let colorsArray = ["red", "blue", "green", "orange", "purple", "teal"];
+
 let currentIndex = 0; // Default index if none is saved
 let intervalId = null; // Store interval ID
 
@@ -38,8 +41,23 @@ function backFunction() {
 
 // Function to update the image and text dynamically
 function updateImageAndText() {
-    document.getElementById("karusellikuva").src = catsArray[currentIndex].src;
-    document.querySelector(".card-text").textContent = catsArray[currentIndex].name;
+    // Generate a random color
+    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+
+    // Fade out the text
+    $(".card-text").fadeOut(400, function () {
+        // Update the text and set its random color once fade-out is complete
+        $(this)
+            .text(catsArray[currentIndex].name) // Update the name
+            .css("color", randomColor) // Apply the random color
+            .fadeIn(400); // Fade back in
+    });
+
+    // Fade out the image
+    $("#karusellikuva").fadeOut(400, function () {
+        // Update the image src once fade-out is complete
+        $(this).attr("src", catsArray[currentIndex].src).fadeIn(400); // Fade back in
+    });
 }
 
 // Function for play/pause functionality
