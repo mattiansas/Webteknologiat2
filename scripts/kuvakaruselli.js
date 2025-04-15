@@ -8,8 +8,6 @@ let catsArray = [
     { "name": "Unto ja Late <3", "src": "pictures/untojalate.jpg" }
 ];
 
-// Array of text colors for dynamic styling
-let colorsArray = ["red", "blue", "green", "orange", "purple", "teal"];
 
 let currentIndex = 0; // Default index if none is saved
 let intervalId = null; // Store interval ID
@@ -39,6 +37,23 @@ function backFunction() {
     localStorage.setItem("carouselIndex", currentIndex); // Save current index
 }
 
+// Function for play/pause functionality
+function playFunction() {
+    const playButton = document.getElementById("playButton");
+    const icon = playButton.querySelector("i");
+
+    if (intervalId === null) {
+        intervalId = window.setInterval(nextFunction, 3000); // Call nextFunction every 3 seconds
+        alert("Kuvakaruselli käynnistetty!");
+        icon.className = "bi bi-pause"; // Change icon to 'pause'
+    } else {
+        window.clearInterval(intervalId);
+        intervalId = null;
+        alert("Kuvakaruselli pysäytetty!");
+        icon.className = "bi bi-play"; // Change icon back to 'play'
+    }
+}
+
 // Function to update the image and text dynamically
 function updateImageAndText() {
     // Generate a random color
@@ -60,22 +75,16 @@ function updateImageAndText() {
     });
 }
 
-// Function for play/pause functionality
-function playFunction() {
-    const playButton = document.getElementById("playButton");
-    const icon = playButton.querySelector("i");
+const rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+let colorIndex = 0;
 
-    if (intervalId === null) {
-        intervalId = window.setInterval(nextFunction, 3000); // Call nextFunction every 3 seconds
-        alert("Kuvakaruselli käynnistetty!");
-        icon.className = "bi bi-pause"; // Change icon to 'pause'
-    } else {
-        window.clearInterval(intervalId);
-        intervalId = null;
-        alert("Kuvakaruselli pysäytetty!");
-        icon.className = "bi bi-play"; // Change icon back to 'play'
-    }
+function cycleRainbowColors() {
+    document.querySelector("h1").style.color = rainbowColors[colorIndex]; // Apply color
+    colorIndex = (colorIndex + 1) % rainbowColors.length; // Move to the next color
 }
+
+// Start the cycle every 500ms
+setInterval(cycleRainbowColors, 1000);
 
 // Initialize the carousel on page load
 init();

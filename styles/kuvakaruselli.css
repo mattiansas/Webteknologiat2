@@ -1,0 +1,32 @@
+.card-text {
+
+    text-align: center;
+    /* Center-align the text */
+    transition: color 0.4s ease-in-out;
+    /* Smoothly transition color changes */
+    font-family: 'Pacifico', cursive;
+    /* Use Pacifico font */
+    font-size: 1.5rem;
+    /* Adjust size for visibility */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    /* Keep the shadow effect */
+    transition: color 0.4s ease-in-out;
+    /* Smooth color transitions */
+    line-height: 1.5;
+    /* Adjust spacing between lines */
+
+}
+
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    /* Keep the stylish font */
+    font-size: 4rem;
+    /* Make it larger (adjust as needed) */
+    text-align: center;
+    /* Center-align for a polished look */
+    margin-bottom: 20px;
+    /* Add space below the header */
+    font-weight: bold;
+    /* Make the text bold */
+}
