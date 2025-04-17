@@ -8,17 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap"
-        rel="stylesheet">
 
-    <link type="text/css" rel="stylesheet" href="styles/kuvakaruselli.css">
+    <link rel="stylesheet" href="styles/listgrid.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-<body onload="init()">
+<body>
 
     <nav class="navbar navbar-expand-md bg-body-tertiary">
         <div class="container-fluid">
@@ -48,39 +44,33 @@
             </div>
         </div>
     </nav>
-
-    <h1 class="card-title text-center mt-5">Kuvakaruselli</h1>
-
-    <div class="container d-flex justify-content-center align-items-center mt-5">
-
-        <div class="container d-flex justify-content-center align-items-center mt-5">
-            <div class="card" style="width: 18rem;">
-                <!-- Add 'img-fluid' for responsive images and set height -->
-                <img id="karusellikuva" class="card-img-top img-fluid" style="height: 300px; object-fit: cover;"
-                    alt="...">
-                <div class="card-body">
-
-                    <p class="card-text text-center">Kisu 1</p>
-
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-primary mx-2" onclick="backFunction()">
-                            <i class="bi bi-arrow-left"></i></button>
-                        <button type="button" class="btn btn-primary mx-2" id="playButton" onclick="playFunction()">
-                            <i class="bi bi-play"></i></button>
-                        <button type="button" class="btn btn-primary mx-2" onclick="nextFunction()">
-                            <i class="bi bi-arrow-right"></i></button>
-                    </div>
-
-                </div>
-            </div>
+    <div class="container d-flex flex-column justify-content-center align-items-center mt-5">
+        <h1 class="mb-4">Näytä lista tai ruudukko</h1>
+        <div>
+            <button type="button" class="btn btn-success me-2" onclick="showGrid()">
+                <i class="bi bi-grid"></i>
+            </button>
+            <button type="button" class="btn btn-success me-2" onclick="showList()">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
-    </div>
+        <div id="image-container" class="grid-container mt-4">
+            <div class="grid-item"><img src="pictures/kisu1.jpg"></div>
+            <div class="grid-item"><img src="pictures/kisu2.jpg"></div>
+            <div class="grid-item"><img src="pictures/kisu3.jpg"></div>
+            <div class="grid-item"><img src="pictures/kisu4.jpg"></div>
+            <div class="grid-item"><img src="pictures/kisu5.jpg"></div>
+            <div class="grid-item"><img src="pictures/kisu6.jpg"></div>
+            <div class="grid-item"><img src="pictures/kisu7.jpg"></div>
+            <div class="grid-item"><img src="pictures/kisu8.jpg"></div>
+            <div class="grid-item"><img src="pictures/kisu9.jpg"></div>
+        </div>
 
-    <script src="scripts/kuvakaruselli.js"></script>
+        <script src="scripts/listgrid.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script> <!-- Tehtävävalikon hampparipainikkeen toimivuus -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script> <!-- Tehtävävalikon hampparipainikkeen toimivuus -->
 
 </body>
 
