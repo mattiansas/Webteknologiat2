@@ -1,0 +1,33 @@
+.accordion-button {
+    background-color: #007BFF !important;
+    /* Forces the background color */
+    color: #FFFFFF !important;
+    /* Forces the text color */
+    border: 1px solid #0056b3 !important;
+    /* Forces the border */
+    border-radius: 4px !important;
+    /* Optional: Rounded corners */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #0056b3;
+    /* Active background color */
+    color: #E6E6E6;
+    /* Active text color */
+    border-color: #003f7f;
+    /* Active border */
+}
+
+.accordion-button:hover {
+    background-color: #0056b3;
+    /* Slightly darker shade for hover effect */
+    color: #E6E6E6;
+    /* Slightly lighter text on hover */
+    border-color: #003f7f;
+    /* Darker border when hovered */
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    /* Adds a subtle focus effect */
+}
