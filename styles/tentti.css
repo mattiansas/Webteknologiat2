@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: olive;
+}
+
+
+img {
+    max-height: 300px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
